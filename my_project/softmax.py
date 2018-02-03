@@ -2,7 +2,7 @@ import numpy as np
 
 def softmax(x):
     """
-    该函数用于计算输入x每一行的softmax。
+    对输入x的每一行计算softmax。
 
     为了提高运算速度，代码使用numpy的np.exp, np.sum, np.reshape, np.max,以及广播运算。
 
@@ -77,5 +77,8 @@ def test_softmax():
 
 
 if __name__ == "__main__":
-    test_softmax_basic()
+    #test_softmax_basic()
+    test1 = np.array([1,  2, 3, 4])
+    print('原始向量',test1)
+    print('经过softmax后',softmax(test1))
 
